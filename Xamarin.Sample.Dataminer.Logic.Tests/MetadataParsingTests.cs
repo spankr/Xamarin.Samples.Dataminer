@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -45,9 +47,33 @@ namespace Xamarin.Sample.Dataminer.Logic.Tests
 
                 Assert.Equal("Starter", metadata.LicenseRequirement);
                 Assert.Equal("Demonstrates a cross-platform app using Xamarin.Forms that retrieves data from a weather service.", metadata.Brief);
-                Assert.True(metadata.Gallery , "Not a gallery");
+                Assert.True(metadata.Gallery, "Not a gallery");
                 Assert.False(metadata.HideZip, "Zip is not hidden");
             }
+        }
+
+        [Theory]
+        [InlineData("Resources/SampleProjPath")]
+        public void FindAllMetadataFileNames(string goodPath)
+        {
+            var svc = new MetadataService();
+
+            var filenames = svc.FindAllMetadataFiles(goodPath);
+            Assert.Equal(2, filenames.Count(f => f.EndsWith("Metadata.xml")));
+
+            var dict = svc.BuildMetaDictionary(filenames);
+
+            Assert.Equal(2, dict.Count);
+            Assert.Equal(filenames, new List<string>(dict.Keys));
+        }
+
+        [Theory]
+        [InlineData("Resources/XXX")]
+        public void FindAllMetadataFiles_InvalidPath(string badPath)
+        {
+            var svc = new MetadataService();
+
+            Assert.Throws<FileNotFoundException>(() => svc.FindAllMetadataFiles(badPath));
         }
     }
 }

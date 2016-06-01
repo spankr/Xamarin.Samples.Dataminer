@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Metadata.cs" />
     <Compile Include="MetadataMarshaller.cs" />
+    <Compile Include="MetadataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
