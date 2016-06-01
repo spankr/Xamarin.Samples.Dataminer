@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Sample.Dataminer.Logic", "Xamarin.Sample.Dataminer.Logic\Xamarin.Sample.Dataminer.Logic.csproj", "{616B3BA9-F1EB-45A0-937C-6F5123D2D63A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Sample.Dataminer.Logic.Tests", "Xamarin.Sample.Dataminer.Logic.Tests\Xamarin.Sample.Dataminer.Logic.Tests.csproj", "{723C5BA9-684D-4DE5-A412-E7263CEFA9DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{616B3BA9-F1EB-45A0-937C-6F5123D2D63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616B3BA9-F1EB-45A0-937C-6F5123D2D63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616B3BA9-F1EB-45A0-937C-6F5123D2D63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616B3BA9-F1EB-45A0-937C-6F5123D2D63A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723C5BA9-684D-4DE5-A412-E7263CEFA9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723C5BA9-684D-4DE5-A412-E7263CEFA9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723C5BA9-684D-4DE5-A412-E7263CEFA9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723C5BA9-684D-4DE5-A412-E7263CEFA9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
