@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Xamarin.Sample.Dataminer.Logic.Models;
 
 namespace Xamarin.Sample.Dataminer.Logic
 {

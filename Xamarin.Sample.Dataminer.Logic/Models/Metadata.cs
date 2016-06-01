@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace Xamarin.Sample.Dataminer.Logic
+namespace Xamarin.Sample.Dataminer.Logic.Models
 {
     [XmlRoot("SampleMetadata")]
     public class Metadata

@@ -56,7 +56,7 @@ namespace Xamarin.Sample.Dataminer.Logic.Tests
         [InlineData("Resources/SampleProjPath")]
         public void FindAllMetadataFileNames(string goodPath)
         {
-            var svc = new MetadataService();
+            var svc = new SampleProjectService();
 
             var filenames = svc.FindAllMetadataFiles(goodPath);
             Assert.Equal(2, filenames.Count(f => f.EndsWith("Metadata.xml")));
@@ -71,7 +71,7 @@ namespace Xamarin.Sample.Dataminer.Logic.Tests
         [InlineData("Resources/XXX")]
         public void FindAllMetadataFiles_InvalidPath(string badPath)
         {
-            var svc = new MetadataService();
+            var svc = new SampleProjectService();
 
             Assert.Throws<FileNotFoundException>(() => svc.FindAllMetadataFiles(badPath));
         }
